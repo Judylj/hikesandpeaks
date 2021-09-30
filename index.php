@@ -44,12 +44,5 @@ foreach ($peak_data as $peak) {
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
     </body>
 </html>

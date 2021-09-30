@@ -9,8 +9,3 @@ if ($hikeAdded) {
 } else {
     header('location: addpeak.php');
 }
-
-
-
-
-

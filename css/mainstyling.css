@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 * {box-sizing: border-box}
 
-
-
 .title {
     color: #8F958D;
     font-family: 'Kosugi Maru', sans-serif;
@@ -112,7 +110,6 @@ button {
     align-items: center;
     column-gap: 2rem;
 }
-
 
 button:hover {
     background-color: #82d1db;

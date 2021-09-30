@@ -20,8 +20,6 @@ function getALLPeaks(PDO $db): array
 }
 
 //adding a new item onto the db//
-
-
 function addNewHike(PDO $db, array $newPeak): bool
 {
     $query = $db->prepare(
