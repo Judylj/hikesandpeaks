@@ -15,33 +15,28 @@ require_once('includes/functions.php');
 
     <body>
         <div class="background-images">
-            <h1 class="title">HIKES & PEAKS</h1>
-            <h2><em>Outdoor Inspiration</em></h2>
+            <h1 class="title title1">Hikes & Peaks</h1>
+            <div class="title subheading">
+                <h2 class="title2">Outdoor Inspiration</h2>
+<!--        button    -->
+                <form action="addpeak.php" method="post">
+                    <button class="mainbutton">Add Hike!</button>
+                </form>
+            </div>
             <div class="layout-flex">
 <?php
 $peak_data = getALLPeaks($db);
 //peak data represents each data item for each peak
 foreach ($peak_data as $peak) {
-    $container = '<div class="image-container">';
-//    above defines the $container as a div which contains the images.
-    $container .= '<div class="image-background">';
-    $container .= '<img src="images/' . $peak['image'] . '">';
-    $container .= "</div>";
-    $container .= '<div class="imagetext">';
-    $container .= "<p><span class='text-label'>Name:</span> " . $peak['name'] . "</p>";
-    $container .= "<p><span class='text-label'>Location:</span> " . $peak['location'] . "</p>";
-    $container .= "<p><span class='text-label'>Elevation:</span> " . $peak['elevation'] . "</p>";
-    $container .= "<p><span class='text-label'>Difficulty:</span> " . $peak['level'] . "</p>";
-    $container .= "<p><span class='text-label'>Range:</span> " . $peak['mountain_range'] . "</p>";
-    $container .= "</div>";
-    $container .= "</div>";
-echo $container;
+
+    echo formatImageContainer($peak);
 }
+
 ?>
             </div>
 
             <div class="information">
-                <h2>About...</h2>
+                <h2 class="heading-title">About...</h2>
                 <div class="description">Hikes & Peaks is a platform for climbers, hikers and nature
                     lovers to share and discover new walks, hikes and outdoor spaces.
                      Add your hike using the "add my hike" button, or simply use it as a source of inspiration
